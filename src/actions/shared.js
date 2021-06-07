@@ -8,13 +8,13 @@ const AUTHED_ID = 'kbbushman';
 
 export function handleInitialData() {
   return (dispatch) => {
-    dispatch(showLoading);
+    dispatch(showLoading());
 
     return getInitialData().then(({ users, tweets }) => {
-      dispatch(hideLoading);
       dispatch(setUsers(users));
       dispatch(setTweets(tweets));
       dispatch(setAuthedUser(AUTHED_ID));
+      dispatch(hideLoading());
     });
   };
 }
