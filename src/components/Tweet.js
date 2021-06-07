@@ -30,7 +30,7 @@ export default function Tweet({ id }) {
           <p>{users[tweet.author].name}</p>
           <span>{getFormatedTimeDate(tweet.timestamp)}</span>
         </div>
-        <div className="tweet-content">
+        <div className="tweet-text">
           <p>{tweet.text}</p>
         </div>
         <div className="tweet-actions">
